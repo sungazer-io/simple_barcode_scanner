@@ -45,13 +45,8 @@ class BarcodeScanner extends StatelessWidget {
     ui.platformViewRegistry
         .registerViewFactory(createdViewId, (int viewId) => iframe);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(kScanPageTitle),
-      ),
-      body: HtmlElementView(
+    return HtmlElementView(
         viewType: createdViewId,
-      ),
-    );
+      );
   }
 }

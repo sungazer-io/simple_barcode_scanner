@@ -30,14 +30,16 @@ class SimpleBarcodeScannerPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BarcodeScanner(
+    return Scaffold(
+      body: BarcodeScanner(
       lineColor: lineColor,
       cancelButtonText: cancelButtonText,
       isShowFlashIcon: isShowFlashIcon,
       scanType: scanType,
       onScanned: (res) {
         Navigator.pop(context, res);
-      },
+        },
+      ),
     );
   }
 }
